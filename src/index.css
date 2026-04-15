@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  
+  --color-gold-50: #FCF6BA;
+  --color-gold-100: #FBF5B7;
+  --color-gold-200: #FCF6BA;
+  --color-gold-300: #BF953F;
+  --color-gold-400: #B38728;
+  --color-gold-500: #AA771C;
+  --color-gold-600: #854d0e;
+  
+  --color-dark-bg: #0A0A0A;
+  --color-panel-bg: #161616;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white font-sans antialiased;
+  }
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border: 1px solid rgba(191, 149, 63, 0.3);
+}
+
+.glass-panel {
+  @apply bg-panel-bg border-white/5;
+}
+
+/* AI Orb Styles */
+.ai-orb-container {
+  @apply relative w-64 h-64 md:w-80 md:h-80 mx-auto flex items-center justify-center;
+}
+
+.ai-orb {
+  @apply w-48 h-48 md:w-60 md:h-60 rounded-full opacity-80 blur-[10px];
+  background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  box-shadow: 0 0 60px rgba(179, 135, 40, 0.4);
+}
+
+.ai-core {
+  @apply absolute w-28 h-28 md:w-36 md:h-36 bg-black rounded-full flex items-center justify-center border-2 border-[#FCF6BA];
+}
+
+.ai-core-inner {
+  @apply w-[40%] h-[40%] rounded-full;
+  background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+
+.markdown-body {
+  @apply text-white/90 leading-relaxed;
+}
+
+.markdown-body p {
+  @apply mb-4;
+}
+
+.markdown-body strong {
+  @apply text-gold-200 font-semibold;
+}
+
+.markdown-body code {
+  @apply bg-white/10 px-1.5 py-0.5 rounded text-gold-100 font-mono text-sm;
+}
+
+.markdown-body pre {
+  @apply bg-white/5 p-4 rounded-xl border border-white/10 overflow-x-auto mb-4;
+}
+
+.markdown-body ul, .markdown-body ol {
+  @apply mb-4 ml-6;
+}
+
+.markdown-body li {
+  @apply mb-2;
+}
+
+
